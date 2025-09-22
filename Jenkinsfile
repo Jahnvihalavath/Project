@@ -6,7 +6,8 @@ pipeline {
                 echo "Build Docker Image" 
                 bat "docker build -t mypythonflaskapp ." 
             } 
-        } stage('Run') { 
+        } 
+        stage('Run') { 
             steps { 
                 echo "Run application in Docker Container" 
                 bat "docker rm -f mycontainer1 || exit 0" 
